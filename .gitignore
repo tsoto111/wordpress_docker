@@ -1,0 +1,8 @@
+# Ignore Files
+.DS_Store
+.htaccess
+
+# Ignore Directories
+public/wp-content/plugins/
+public/wp-content/uploads/
+wp-content/themes/twenty*/
