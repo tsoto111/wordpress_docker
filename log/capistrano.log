@@ -1,0 +1,238 @@
+# Logfile created on 2020-12-03 11:09:50 -0600 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-12-03 11:09:50 -0600 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [358633e1] Running /usr/bin/env mkdir -p /tmp on 198.58.111.19
+ DEBUG [358633e1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4209a1c3] Running /usr/bin/env #<StringIO:0x007faf92b41718> /tmp/git-ssh-wordpress_docker-production-tavo.sh on 198.58.111.19
+ DEBUG [4209a1c3] Command: /usr/bin/env #<StringIO:0x007faf92b41718> /tmp/git-ssh-wordpress_docker-production-tavo.sh
+  INFO [15145879] Running /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh on 198.58.111.19
+ DEBUG [15145879] Command: /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh
+  INFO [b43723a1] Running /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD on 198.58.111.19
+ DEBUG [b43723a1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD )
+  INFO [5078206f] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared /opt/webhosting/sites/wordpress_docker/releases on 198.58.111.19
+ DEBUG [5078206f] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared /opt/webhosting/sites/wordpress_docker/releases
+  INFO [78a0b3b3] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins on 198.58.111.19
+ DEBUG [78a0b3b3] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins
+ DEBUG [d92f0914] Running [ -f /opt/webhosting/sites/wordpress_docker/current/REVISION ] on 198.58.111.19
+ DEBUG [d92f0914] Command: [ -f /opt/webhosting/sites/wordpress_docker/current/REVISION ]
+ DEBUG [0c8fad22] Running /usr/bin/env cat /opt/webhosting/sites/wordpress_docker/current/REVISION 2>/dev/null on 198.58.111.19
+ DEBUG [0c8fad22] Command: /usr/bin/env cat /opt/webhosting/sites/wordpress_docker/current/REVISION 2>/dev/null
+ DEBUG [ed58ddb8] Running [ -f /opt/webhosting/sites/wordpress_docker/repo/HEAD ] on 198.58.111.19
+ DEBUG [ed58ddb8] Command: [ -f /opt/webhosting/sites/wordpress_docker/repo/HEAD ]
+  INFO The repository mirror is at /opt/webhosting/sites/wordpress_docker/repo
+ DEBUG [d5a3b67d] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [d5a3b67d] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+  INFO [1423ce13] Running /usr/bin/env git remote set-url origin git@github.com:tsoto111/wordpress_docker.git on 198.58.111.19
+ DEBUG [1423ce13] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git remote set-url origin git@github.com:tsoto111/wordpress_docker.git )
+  INFO [6d4734a4] Running /usr/bin/env git remote update --prune on 198.58.111.19
+ DEBUG [6d4734a4] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [108dd914] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [108dd914] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+  INFO [463c4cdb] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203170950 on 198.58.111.19
+ DEBUG [463c4cdb] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203170950 )
+  INFO [87ecdfca] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /opt/webhosting/sites/wordpress_docker/releases/20201203170950 on 198.58.111.19
+ DEBUG [87ecdfca] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /opt/webhosting/sites/wordpress_docker/releases/20201203170950 )
+ DEBUG [357aada4] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [357aada4] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+ DEBUG [4342937c] Running /usr/bin/env git rev-list --max-count=1 master on 198.58.111.19
+ DEBUG [4342937c] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e6379533] Running if test ! -d /opt/webhosting/sites/wordpress_docker/releases/20201203170950; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases/20201203170950'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [e6379533] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/releases/20201203170950; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases/20201203170950'" 1>&2; false; fi
+  INFO [458b72f2] Running /usr/bin/env echo "" > REVISION on 198.58.111.19
+ DEBUG [458b72f2] Command: cd /opt/webhosting/sites/wordpress_docker/releases/20201203170950 && /usr/bin/env echo "" > REVISION
+  INFO [56d3cfee] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203170950/public/wp-content /opt/webhosting/sites/wordpress_docker/releases/20201203170950/plugin/wp-content on 198.58.111.19
+ DEBUG [56d3cfee] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203170950/public/wp-content /opt/webhosting/sites/wordpress_docker/releases/20201203170950/plugin/wp-content
+ DEBUG [e9034cd7] Running [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203170950/public/wp-content/uploads ] on 198.58.111.19
+ DEBUG [e9034cd7] Command: [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203170950/public/wp-content/uploads ]
+ DEBUG [6f6c6d93] Running [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203170950/plugin/wp-content/plugins ] on 198.58.111.19
+ DEBUG [6f6c6d93] Command: [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203170950/plugin/wp-content/plugins ]
+  INFO [5c2922ec] Running /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/releases/20201203170950 /opt/webhosting/sites/wordpress_docker/releases/current on 198.58.111.19
+ DEBUG [5c2922ec] Command: /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/releases/20201203170950 /opt/webhosting/sites/wordpress_docker/releases/current
+  INFO [c38dc5ec] Running /usr/bin/env mv /opt/webhosting/sites/wordpress_docker/releases/current /opt/webhosting/sites/wordpress_docker on 198.58.111.19
+ DEBUG [c38dc5ec] Command: /usr/bin/env mv /opt/webhosting/sites/wordpress_docker/releases/current /opt/webhosting/sites/wordpress_docker
+ DEBUG [bc1cb7a0] Running /usr/bin/env ls -x /opt/webhosting/sites/wordpress_docker/releases on 198.58.111.19
+ DEBUG [bc1cb7a0] Command: /usr/bin/env ls -x /opt/webhosting/sites/wordpress_docker/releases
+ DEBUG [44949a6a] Running if test ! -d /opt/webhosting/sites/wordpress_docker/releases; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [44949a6a] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/releases; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases'" 1>&2; false; fi
+  INFO [2b4f24a7] Running /usr/bin/env echo "Branch master (at ) deployed as release 20201203170950 by tavo" >> /opt/webhosting/sites/wordpress_docker/revisions.log on 198.58.111.19
+ DEBUG [2b4f24a7] Command: cd /opt/webhosting/sites/wordpress_docker/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20201203170950 by tavo" >> /opt/webhosting/sites/wordpress_docker/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-12-03 11:10:04 -0600 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5bf5bcec] Running /usr/bin/env mkdir -p /tmp on 198.58.111.19
+ DEBUG [5bf5bcec] Command: /usr/bin/env mkdir -p /tmp
+  INFO [356f4e8a] Running /usr/bin/env #<StringIO:0x007ff5b7c964b8> /tmp/git-ssh-wordpress_docker-production-tavo.sh on 198.58.111.19
+ DEBUG [356f4e8a] Command: /usr/bin/env #<StringIO:0x007ff5b7c964b8> /tmp/git-ssh-wordpress_docker-production-tavo.sh
+  INFO [c140092f] Running /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh on 198.58.111.19
+ DEBUG [c140092f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh
+  INFO [7db8a3ef] Running /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD on 198.58.111.19
+ DEBUG [7db8a3ef] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD )
+  INFO [3735df94] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared /opt/webhosting/sites/wordpress_docker/releases on 198.58.111.19
+ DEBUG [3735df94] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared /opt/webhosting/sites/wordpress_docker/releases
+  INFO [3c4a75f3] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins on 198.58.111.19
+ DEBUG [3c4a75f3] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins
+ DEBUG [976857f4] Running [ -f /opt/webhosting/sites/wordpress_docker/current/REVISION ] on 198.58.111.19
+ DEBUG [976857f4] Command: [ -f /opt/webhosting/sites/wordpress_docker/current/REVISION ]
+ DEBUG [442a08a0] Running /usr/bin/env cat /opt/webhosting/sites/wordpress_docker/current/REVISION 2>/dev/null on 198.58.111.19
+ DEBUG [442a08a0] Command: /usr/bin/env cat /opt/webhosting/sites/wordpress_docker/current/REVISION 2>/dev/null
+ DEBUG [c303115f] Running [ -f /opt/webhosting/sites/wordpress_docker/repo/HEAD ] on 198.58.111.19
+ DEBUG [c303115f] Command: [ -f /opt/webhosting/sites/wordpress_docker/repo/HEAD ]
+  INFO The repository mirror is at /opt/webhosting/sites/wordpress_docker/repo
+ DEBUG [a2863ce7] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [a2863ce7] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+  INFO [6a2bb6bc] Running /usr/bin/env git remote set-url origin git@github.com:tsoto111/wordpress_docker.git on 198.58.111.19
+ DEBUG [6a2bb6bc] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git remote set-url origin git@github.com:tsoto111/wordpress_docker.git )
+  INFO [2a08146d] Running /usr/bin/env git remote update --prune on 198.58.111.19
+ DEBUG [2a08146d] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [22dc4cb7] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [22dc4cb7] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+  INFO [d1fe8caa] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203171004 on 198.58.111.19
+ DEBUG [d1fe8caa] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203171004 )
+  INFO [8b979959] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /opt/webhosting/sites/wordpress_docker/releases/20201203171004 on 198.58.111.19
+ DEBUG [8b979959] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /opt/webhosting/sites/wordpress_docker/releases/20201203171004 )
+ DEBUG [5ad7d3e2] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [5ad7d3e2] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+ DEBUG [5d5cde8d] Running /usr/bin/env git rev-list --max-count=1 master on 198.58.111.19
+ DEBUG [5d5cde8d] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [038a287e] Running if test ! -d /opt/webhosting/sites/wordpress_docker/releases/20201203171004; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases/20201203171004'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [038a287e] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/releases/20201203171004; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases/20201203171004'" 1>&2; false; fi
+  INFO [f4a0fef6] Running /usr/bin/env echo "" > REVISION on 198.58.111.19
+ DEBUG [f4a0fef6] Command: cd /opt/webhosting/sites/wordpress_docker/releases/20201203171004 && /usr/bin/env echo "" > REVISION
+  INFO [5265f9e7] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203171004/public/wp-content /opt/webhosting/sites/wordpress_docker/releases/20201203171004/plugin/wp-content on 198.58.111.19
+ DEBUG [5265f9e7] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203171004/public/wp-content /opt/webhosting/sites/wordpress_docker/releases/20201203171004/plugin/wp-content
+ DEBUG [eaa26c70] Running [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203171004/public/wp-content/uploads ] on 198.58.111.19
+ DEBUG [eaa26c70] Command: [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203171004/public/wp-content/uploads ]
+ DEBUG [30e8bcf4] Running [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203171004/plugin/wp-content/plugins ] on 198.58.111.19
+ DEBUG [30e8bcf4] Command: [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203171004/plugin/wp-content/plugins ]
+  INFO [d1c70545] Running /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/releases/20201203171004 /opt/webhosting/sites/wordpress_docker/releases/current on 198.58.111.19
+ DEBUG [d1c70545] Command: /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/releases/20201203171004 /opt/webhosting/sites/wordpress_docker/releases/current
+  INFO [ba283d5f] Running /usr/bin/env mv /opt/webhosting/sites/wordpress_docker/releases/current /opt/webhosting/sites/wordpress_docker on 198.58.111.19
+ DEBUG [ba283d5f] Command: /usr/bin/env mv /opt/webhosting/sites/wordpress_docker/releases/current /opt/webhosting/sites/wordpress_docker
+ DEBUG [f52b5022] Running /usr/bin/env ls -x /opt/webhosting/sites/wordpress_docker/releases on 198.58.111.19
+ DEBUG [f52b5022] Command: /usr/bin/env ls -x /opt/webhosting/sites/wordpress_docker/releases
+ DEBUG [2a8fdb84] Running if test ! -d /opt/webhosting/sites/wordpress_docker/releases; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [2a8fdb84] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/releases; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases'" 1>&2; false; fi
+  INFO [f36a0481] Running /usr/bin/env echo "Branch master (at ) deployed as release 20201203171004 by tavo" >> /opt/webhosting/sites/wordpress_docker/revisions.log on 198.58.111.19
+ DEBUG [f36a0481] Command: cd /opt/webhosting/sites/wordpress_docker/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20201203171004 by tavo" >> /opt/webhosting/sites/wordpress_docker/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-12-03 11:10:50 -0600 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6d9cd047] Running /usr/bin/env mkdir -p /tmp on 198.58.111.19
+ DEBUG [6d9cd047] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6d9cd047] Finished in 1.420 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wordpress_docker-production-tavo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wordpress_docker-production-tavo.sh 100.0%
+  INFO [b6fe9a88] Running /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh on 198.58.111.19
+ DEBUG [b6fe9a88] Command: /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh
+  INFO [b6fe9a88] Finished in 0.288 seconds with exit status 0 (successful).
+  INFO [e2a76455] Running /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD on 198.58.111.19
+ DEBUG [e2a76455] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD )
+ DEBUG [e2a76455] 	/usr/bin/env: git: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-12-03 11:16:20 -0600 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3705544f] Running /usr/bin/env mkdir -p /tmp on 198.58.111.19
+ DEBUG [3705544f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3705544f] Finished in 1.609 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wordpress_docker-production-tavo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wordpress_docker-production-tavo.sh 100.0%
+  INFO [7502bdc0] Running /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh on 198.58.111.19
+ DEBUG [7502bdc0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh
+  INFO [7502bdc0] Finished in 0.145 seconds with exit status 0 (successful).
+  INFO [691a6e5b] Running /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD on 198.58.111.19
+ DEBUG [691a6e5b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD )
+ DEBUG [691a6e5b] 	Warning: Permanently added 'github.com,140.82.114.3' (RSA) to the list of known hosts.
+ DEBUG [691a6e5b] 	325744540344e128fa142d08f0c3bc4b6ce6825f	HEAD
+  INFO [691a6e5b] Finished in 1.329 seconds with exit status 0 (successful).
+  INFO [c81be679] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared /opt/webhosting/sites/wordpress_docker/releases on 198.58.111.19
+ DEBUG [c81be679] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared /opt/webhosting/sites/wordpress_docker/releases
+  INFO [c81be679] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO [7bd48cf6] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins on 198.58.111.19
+ DEBUG [7bd48cf6] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins
+  INFO [7bd48cf6] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [1b26d3b9] Running [ -f /opt/webhosting/sites/wordpress_docker/current/REVISION ] on 198.58.111.19
+ DEBUG [1b26d3b9] Command: [ -f /opt/webhosting/sites/wordpress_docker/current/REVISION ]
+ DEBUG [1b26d3b9] Finished in 0.155 seconds with exit status 1 (failed).
+ DEBUG [976d25b7] Running [ -f /opt/webhosting/sites/wordpress_docker/repo/HEAD ] on 198.58.111.19
+ DEBUG [976d25b7] Command: [ -f /opt/webhosting/sites/wordpress_docker/repo/HEAD ]
+ DEBUG [976d25b7] Finished in 0.131 seconds with exit status 1 (failed).
+ DEBUG [7748d935] Running if test ! -d /opt/webhosting/sites/wordpress_docker; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [7748d935] Command: if test ! -d /opt/webhosting/sites/wordpress_docker; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker'" 1>&2; false; fi
+ DEBUG [7748d935] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [7c152ec6] Running /usr/bin/env git clone --mirror git@github.com:tsoto111/wordpress_docker.git /opt/webhosting/sites/wordpress_docker/repo on 198.58.111.19
+ DEBUG [7c152ec6] Command: cd /opt/webhosting/sites/wordpress_docker && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git clone --mirror git@github.com:tsoto111/wordpress_docker.git /opt/webhosting/sites/wordpress_docker/repo )
+ DEBUG [7c152ec6] 	Cloning into bare repository '/opt/webhosting/sites/wordpress_docker/repo'...
+  INFO [7c152ec6] Finished in 1.759 seconds with exit status 0 (successful).
+ DEBUG [fdaaaea6] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [fdaaaea6] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+ DEBUG [fdaaaea6] Finished in 0.209 seconds with exit status 0 (successful).
+  INFO [7023b7ae] Running /usr/bin/env git remote set-url origin git@github.com:tsoto111/wordpress_docker.git on 198.58.111.19
+ DEBUG [7023b7ae] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git remote set-url origin git@github.com:tsoto111/wordpress_docker.git )
+  INFO [7023b7ae] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [2c3bc9ec] Running /usr/bin/env git remote update --prune on 198.58.111.19
+ DEBUG [2c3bc9ec] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2c3bc9ec] 	Fetching origin
+  INFO [2c3bc9ec] Finished in 1.692 seconds with exit status 0 (successful).
+ DEBUG [385063e1] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [385063e1] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+ DEBUG [385063e1] Finished in 0.423 seconds with exit status 0 (successful).
+  INFO [010d496a] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203171624 on 198.58.111.19
+ DEBUG [010d496a] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203171624 )
+  INFO [010d496a] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [2775549d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /opt/webhosting/sites/wordpress_docker/releases/20201203171624 on 198.58.111.19
+ DEBUG [2775549d] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /opt/webhosting/sites/wordpress_docker/releases/20201203171624 )
+  INFO [2775549d] Finished in 0.972 seconds with exit status 0 (successful).
+ DEBUG [e4f21d1f] Running if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [e4f21d1f] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/repo; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/repo'" 1>&2; false; fi
+ DEBUG [e4f21d1f] Finished in 0.190 seconds with exit status 0 (successful).
+ DEBUG [6701a921] Running /usr/bin/env git rev-list --max-count=1 master on 198.58.111.19
+ DEBUG [6701a921] Command: cd /opt/webhosting/sites/wordpress_docker/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6701a921] 	325744540344e128fa142d08f0c3bc4b6ce6825f
+ DEBUG [6701a921] Finished in 0.181 seconds with exit status 0 (successful).
+ DEBUG [4afdd19c] Running if test ! -d /opt/webhosting/sites/wordpress_docker/releases/20201203171624; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases/20201203171624'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [4afdd19c] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/releases/20201203171624; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases/20201203171624'" 1>&2; false; fi
+ DEBUG [4afdd19c] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [e738d714] Running /usr/bin/env echo "325744540344e128fa142d08f0c3bc4b6ce6825f" > REVISION on 198.58.111.19
+ DEBUG [e738d714] Command: cd /opt/webhosting/sites/wordpress_docker/releases/20201203171624 && /usr/bin/env echo "325744540344e128fa142d08f0c3bc4b6ce6825f" > REVISION
+  INFO [e738d714] Finished in 0.146 seconds with exit status 0 (successful).
+  INFO [756ab6fa] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content /opt/webhosting/sites/wordpress_docker/releases/20201203171624/plugin/wp-content on 198.58.111.19
+ DEBUG [756ab6fa] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content /opt/webhosting/sites/wordpress_docker/releases/20201203171624/plugin/wp-content
+  INFO [756ab6fa] Finished in 0.145 seconds with exit status 0 (successful).
+ DEBUG [2afb6ed0] Running [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content/uploads ] on 198.58.111.19
+ DEBUG [2afb6ed0] Command: [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content/uploads ]
+ DEBUG [2afb6ed0] Finished in 0.134 seconds with exit status 1 (failed).
+ DEBUG [b771b54b] Running [ -d /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content/uploads ] on 198.58.111.19
+ DEBUG [b771b54b] Command: [ -d /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content/uploads ]
+ DEBUG [b771b54b] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [a0cbcadc] Running /usr/bin/env rm -rf /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content/uploads on 198.58.111.19
+ DEBUG [a0cbcadc] Command: /usr/bin/env rm -rf /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content/uploads
+  INFO [a0cbcadc] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [d774f178] Running /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content/uploads on 198.58.111.19
+ DEBUG [d774f178] Command: /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/releases/20201203171624/public/wp-content/uploads
+  INFO [d774f178] Finished in 0.140 seconds with exit status 0 (successful).
+ DEBUG [5613a49e] Running [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203171624/plugin/wp-content/plugins ] on 198.58.111.19
+ DEBUG [5613a49e] Command: [ -L /opt/webhosting/sites/wordpress_docker/releases/20201203171624/plugin/wp-content/plugins ]
+ DEBUG [5613a49e] Finished in 0.136 seconds with exit status 1 (failed).
+ DEBUG [eef787c2] Running [ -d /opt/webhosting/sites/wordpress_docker/releases/20201203171624/plugin/wp-content/plugins ] on 198.58.111.19
+ DEBUG [eef787c2] Command: [ -d /opt/webhosting/sites/wordpress_docker/releases/20201203171624/plugin/wp-content/plugins ]
+ DEBUG [eef787c2] Finished in 0.145 seconds with exit status 1 (failed).
+  INFO [6daec587] Running /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins /opt/webhosting/sites/wordpress_docker/releases/20201203171624/plugin/wp-content/plugins on 198.58.111.19
+ DEBUG [6daec587] Command: /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins /opt/webhosting/sites/wordpress_docker/releases/20201203171624/plugin/wp-content/plugins
+  INFO [6daec587] Finished in 0.144 seconds with exit status 0 (successful).
+  INFO [5f3a5d9a] Running /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/releases/20201203171624 /opt/webhosting/sites/wordpress_docker/releases/current on 198.58.111.19
+ DEBUG [5f3a5d9a] Command: /usr/bin/env ln -s /opt/webhosting/sites/wordpress_docker/releases/20201203171624 /opt/webhosting/sites/wordpress_docker/releases/current
+  INFO [5f3a5d9a] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [713512e1] Running /usr/bin/env mv /opt/webhosting/sites/wordpress_docker/releases/current /opt/webhosting/sites/wordpress_docker on 198.58.111.19
+ DEBUG [713512e1] Command: /usr/bin/env mv /opt/webhosting/sites/wordpress_docker/releases/current /opt/webhosting/sites/wordpress_docker
+  INFO [713512e1] Finished in 0.233 seconds with exit status 0 (successful).
+ DEBUG [f661dac3] Running /usr/bin/env ls -x /opt/webhosting/sites/wordpress_docker/releases on 198.58.111.19
+ DEBUG [f661dac3] Command: /usr/bin/env ls -x /opt/webhosting/sites/wordpress_docker/releases
+ DEBUG [f661dac3] 	20201203171624
+ DEBUG [f661dac3] Finished in 0.188 seconds with exit status 0 (successful).
+ DEBUG [935fa346] Running if test ! -d /opt/webhosting/sites/wordpress_docker/releases; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases'" 1>&2; false; fi on 198.58.111.19
+ DEBUG [935fa346] Command: if test ! -d /opt/webhosting/sites/wordpress_docker/releases; then echo "Directory does not exist '/opt/webhosting/sites/wordpress_docker/releases'" 1>&2; false; fi
+ DEBUG [935fa346] Finished in 0.394 seconds with exit status 0 (successful).
+  INFO [db7132c5] Running /usr/bin/env echo "Branch master (at 325744540344e128fa142d08f0c3bc4b6ce6825f) deployed as release 20201203171624 by tavo" >> /opt/webhosting/sites/wordpress_docker/revisions.log on 198.58.111.19
+ DEBUG [db7132c5] Command: cd /opt/webhosting/sites/wordpress_docker/releases && /usr/bin/env echo "Branch master (at 325744540344e128fa142d08f0c3bc4b6ce6825f) deployed as release 20201203171624 by tavo" >> /opt/webhosting/sites/wordpress_docker/revisions.log
+  INFO [db7132c5] Finished in 0.268 seconds with exit status 0 (successful).

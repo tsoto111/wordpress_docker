@@ -1,6 +1,7 @@
 # Ignore Files
 .DS_Store
 .htaccess
+public/wp-config.php
 
 # Ignore Directories
 public/wp-content/plugins/*
