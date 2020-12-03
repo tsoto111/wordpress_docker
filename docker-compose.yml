@@ -2,8 +2,7 @@ version: '3.4'
 
 services:
   wordpress:
-    image: wordpress
-    restart: always
+    build: .
     ports:
       - 80:80
     environment:
@@ -13,11 +12,11 @@ services:
       WORDPRESS_DB_NAME: wordpress_db
     volumes:
       - type: bind
-        source: ./public/
+        source: ./
         target: /var/www/html
       - type: bind
-        source: ./server_config/wordpress.conf
-        target: /etc/apache2/sites-available/default.conf
+        source: ./server_config/
+        target: /etc/apache2/sites-available/
     depends_on:
       - db
       - phpmyadmin
