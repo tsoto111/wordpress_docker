@@ -1,8 +1,10 @@
 # Ignore Files
 .DS_Store
 .htaccess
+public/wp-config.php
 
 # Ignore Directories
+log
 public/wp-content/plugins/*
 !public/wp-content/plugins/.gitkeep
 public/wp-content/uploads/*
