@@ -8,6 +8,7 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 server "198.58.111.19", roles: %w{app db web}
+set :branch, "deploy"
 
 # role-based syntax
 # ==================
