@@ -15,8 +15,8 @@ set :user, ENV["USER"]
 set :deploy_to, "/opt/webhosting/sites/wordpress_docker"
 
 # Symlinked directory/files on the server to prevent these files from being overwritten on deploy!
-append :linked_files, "public/wp-content/wp-config.php"
-append :linked_dirs, "public/wp-content/uploads", "plugin/wp-content/plugins"
+# append :linked_files, "public/wp-content/wp-config.php" # Enable this once wp-config.php has been set up!!!
+append :linked_dirs, "public/wp-content/uploads", "public/wp-content/plugins"
 
 # Keep how many releases on server?
 set :keep_releases, 3

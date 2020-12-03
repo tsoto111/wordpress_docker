@@ -236,3 +236,32 @@
   INFO [db7132c5] Running /usr/bin/env echo "Branch master (at 325744540344e128fa142d08f0c3bc4b6ce6825f) deployed as release 20201203171624 by tavo" >> /opt/webhosting/sites/wordpress_docker/revisions.log on 198.58.111.19
  DEBUG [db7132c5] Command: cd /opt/webhosting/sites/wordpress_docker/releases && /usr/bin/env echo "Branch master (at 325744540344e128fa142d08f0c3bc4b6ce6825f) deployed as release 20201203171624 by tavo" >> /opt/webhosting/sites/wordpress_docker/revisions.log
   INFO [db7132c5] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-12-03 12:01:31 -0600 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [11971431] Running /usr/bin/env mkdir -p /tmp on 198.58.111.19
+ DEBUG [11971431] Command: /usr/bin/env mkdir -p /tmp
+  INFO [11971431] Finished in 1.904 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wordpress_docker-production-tavo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wordpress_docker-production-tavo.sh 100.0%
+  INFO [e03f9cfd] Running /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh on 198.58.111.19
+ DEBUG [e03f9cfd] Command: /usr/bin/env chmod 700 /tmp/git-ssh-wordpress_docker-production-tavo.sh
+  INFO [e03f9cfd] Finished in 1.333 seconds with exit status 0 (successful).
+  INFO [cd78b876] Running /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD on 198.58.111.19
+ DEBUG [cd78b876] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wordpress_docker-production-tavo.sh" ; /usr/bin/env git ls-remote git@github.com:tsoto111/wordpress_docker.git HEAD )
+ DEBUG [cd78b876] 	Warning: Permanently added the RSA host key for IP address '140.82.113.4' to the list of known hosts.
+ DEBUG [cd78b876] 	325744540344e128fa142d08f0c3bc4b6ce6825f	HEAD
+  INFO [cd78b876] Finished in 1.260 seconds with exit status 0 (successful).
+  INFO [c9f0d5e3] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared /opt/webhosting/sites/wordpress_docker/releases on 198.58.111.19
+ DEBUG [c9f0d5e3] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared /opt/webhosting/sites/wordpress_docker/releases
+  INFO [c9f0d5e3] Finished in 0.188 seconds with exit status 0 (successful).
+  INFO [cd1cbdb3] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins on 198.58.111.19
+ DEBUG [cd1cbdb3] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/uploads /opt/webhosting/sites/wordpress_docker/shared/plugin/wp-content/plugins
+  INFO [cd1cbdb3] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO [15b371d9] Running /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content on 198.58.111.19
+ DEBUG [15b371d9] Command: /usr/bin/env mkdir -p /opt/webhosting/sites/wordpress_docker/shared/public/wp-content
+  INFO [15b371d9] Finished in 0.157 seconds with exit status 0 (successful).
+ DEBUG [db2949c6] Running [ -f /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/wp-config.php ] on 198.58.111.19
+ DEBUG [db2949c6] Command: [ -f /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/wp-config.php ]
+ DEBUG [db2949c6] Finished in 0.174 seconds with exit status 1 (failed).
+ ERROR linked file /opt/webhosting/sites/wordpress_docker/shared/public/wp-content/wp-config.php does not exist on 198.58.111.19
