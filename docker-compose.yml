@@ -15,7 +15,7 @@ services:
         source: ./
         target: /var/www/html
       - type: bind
-        source: ./server_config/
+        source: ./docker_vhosts/
         target: /etc/apache2/sites-available/
     depends_on:
       - db

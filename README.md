@@ -16,7 +16,7 @@ Before you get started, make sure you have installed [Docker Desktop](https://ww
 
 ### VirtualHosts
 
-You can set up your own custom VirtualHost domain for local development by modifying the `server_config/wordpress.conf` file in the project directory. 
+You can set up your own custom VirtualHost domain for local development by modifying the `docker_vhosts/default.conf` file in the project directory. 
 
 All you need too do is update the `ServerName` setting in the VirtualHost block to whatever you would like. This will be the domain you will use to pull the wordpress site up in your browser.
 
